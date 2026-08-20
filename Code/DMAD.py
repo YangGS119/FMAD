@@ -84,8 +84,8 @@ def Calculate_AF(fsr, K, Gamma, T_max=100, Epsilon=1e-6):
     FHkNN = np.where(fhsr >= kth_fhsr[:, None], fhsr, 0)
     FHkNN_Card = np.sum(FHkNN, axis=1)
 
-    frd = np.minimum(FHkNN, kth_fhsr)
-    den = np.sum(frd, axis=1) / FHkNN_Card
+    frs = np.minimum(FHkNN, kth_fhsr)
+    den = np.sum(frs, axis=1) / FHkNN_Card
 
     AF = np.sum(np.where(FkNN > 0, den, 0), axis=1) / (den * FkNN_Card)
     W = FSkNN / FSkNN_Card[:, None]
