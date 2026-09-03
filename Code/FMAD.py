@@ -25,7 +25,7 @@ def FMAD(datas, types, K, Gamma, T_max=100, Epsilon=1e-6):
     Returns
     -------
     AS : ndarray, shape (n_samples, 1)
-        Anomaly score per sample (higher = more anomalous).
+        Anomaly score per object (higher = more anomalous).
     """
     num_fsr, cat_fsr = FSR(datas, types)
 
@@ -61,7 +61,7 @@ def Calculate_AF(fsr, K, Gamma, T_max=100, Epsilon=1e-6):
    Returns
    -------
    AF : ndarray, shape (n_samples,)
-       Anomaly factor per sample.
+       Anomaly factor per object.
    """
     kth_fsr = -np.partition(-fsr, K, axis=1)[:, K]
     FkNN = np.where(fsr >= kth_fsr[:, None], fsr, 0)
