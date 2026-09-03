@@ -3,9 +3,9 @@ from scipy.spatial.distance import pdist, squareform
 from sklearn.preprocessing import MinMaxScaler
 
 
-def DMAD(datas, types, K, Gamma, T_max=100, Epsilon=1e-6):
+def FMAD(datas, types, K, Gamma, T_max=100, Epsilon=1e-6):
     """
-    Dual-branch Multi-fuzzy neighborhood-based Anomaly Detection for mixed-attribute data (DMAD)
+    FMAD: Feature Routing-Based Multi-Fuzzy Neighborhood Anomaly Detection for Heterogeneous Data
 
     Parameters
     ----------
