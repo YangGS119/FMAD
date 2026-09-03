@@ -16,7 +16,7 @@ def FMAD(datas, types, K, Gamma, T_max=100, Epsilon=1e-6):
     K : int
         Number of nearest neighbors, ranging from [1, 100], with a step size of 1.
     Gamma : float
-       Balance factor between fsr and fssr, ranging from [0, 1], with a step size of 0.2.
+        Balance factor between fsr and fssr, ranging from [0, 1], with a step size of 0.2.
     T_max : int, default=100
         Max iterations for convergence.
     Epsilon : float, default=1e-6
@@ -56,7 +56,7 @@ def Calculate_AF(fsr, K, Gamma, T_max=100, Epsilon=1e-6):
    T_max : int, default=100
        Max iterations for convergence.
    Epsilon : float, default=1e-6
-        Convergence tolerance (L1 norm).
+       Convergence tolerance (L1 norm).
 
    Returns
    -------
